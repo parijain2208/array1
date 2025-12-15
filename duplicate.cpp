@@ -10,9 +10,13 @@ int main(){
         cin>>arr[i];
     }
     for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+        for (int j=i+1;j<n;j++){
+            if (arr[i]==arr[j]){
+                cout<<"duplicate element";
+                return 0;
+            }
+        }
     }
-    cout<<endl;
-    cout<<sizeof(arr)<<endl;
-    
+    cout<<"array doesn't have duplicate element";
+    return 0;
 }

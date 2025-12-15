@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int n;
+    int n,above=0;
     cout<<"enter size of array";
     cin>>n;
     int arr[n];
@@ -10,9 +10,9 @@ int main(){
         cin>>arr[i];
     }
     for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+        if (arr[i]>100){
+            above+=1;
+        }
     }
-    cout<<endl;
-    cout<<sizeof(arr)<<endl;
-    
+    cout<<above;
 }

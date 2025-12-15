@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main(){
-    int n;
+    int n,product=1;
     cout<<"enter size of array";
     cin>>n;
     int arr[n];
@@ -10,9 +10,10 @@ int main(){
         cin>>arr[i];
     }
     for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
+        cout<<arr[i]<<endl;
     }
-    cout<<endl;
-    cout<<sizeof(arr)<<endl;
-    
+     for(int i=0;i<n;i++){
+        product*=arr[i];
+    }
+    cout<<"product"<<product<<endl;
 }
